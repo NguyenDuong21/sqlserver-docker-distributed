@@ -1,0 +1,7 @@
+CREATE DATABASE Sales
+GO
+USE [SALES]
+GO
+CREATE TABLE CUSTOMER([CustomerID] [int] NOT NULL, [SalesAmount] [decimal] NOT NULL)
+GO
+INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (7,700),(8,800),(9,900)

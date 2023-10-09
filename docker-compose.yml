@@ -1,0 +1,33 @@
+version: "3"
+services:
+    db1:
+        build: ./db1
+        environment:
+            SA_PASSWORD: "MssqlPass123"
+            ACCEPT_EULA: "Y"
+            MSSQL_AGENT_ENABLED: "true"
+            MSSQL_ENABLE_HADR: "true"
+            MSSQL_RPC_PORT: "135"
+            MSSQL_DTC_TCP_PORT: "51000"
+        ports:
+            - "2500:1433"
+            - "2600:135"
+            - "2700:51000"
+        container_name: db1
+        hostname: db1
+    db2:
+        build: ./db2
+        environment:
+            SA_PASSWORD: "MssqlPass123"
+            ACCEPT_EULA: "Y"
+            MSSQL_AGENT_ENABLED: "true"
+            MSSQL_ENABLE_HADR: "true"
+            MSSQL_RPC_PORT: "135"
+            MSSQL_DTC_TCP_PORT: "51000"
+        ports:
+            - "2800:1433"
+            - "2900:135"
+            - "2901:51000"
+        container_name: db2
+        hostname: db2
+
