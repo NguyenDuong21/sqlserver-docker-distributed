@@ -12,6 +12,12 @@ https://docs.docker.com/compose/install/
 ### Step 2:
 Clone this repository
 
+```
+git clone https://github.com/NguyenDuong21/sqlserver-docker-distributed.git
+
+cd sqlserver-docker-distributed
+```
+
 ### Step 3: Run docker compose under background
 Run below command to start container:
 ```
@@ -38,7 +44,10 @@ cd /opt/mssql-tools/bin/
 
 ./sqlcmd -S db1 -U sa -P <password>
 ```
-Note: <password> specific in docker-compose as environment
+
+
+Note: password for user sa specific in docker-compose as environment variable
+
 
 ### Step 6: Create db, add table, create link server ...
 example: 
